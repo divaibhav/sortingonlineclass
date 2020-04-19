@@ -43,6 +43,9 @@ public class MyQuickSort {
         while (down < up) {
             //step 4(a)
             while (arr[down] <= pivot) {
+                 if(down==arr.length-1){
+                    break;
+                 }
                 down = down + 1;
             }
             //step 4(b)
