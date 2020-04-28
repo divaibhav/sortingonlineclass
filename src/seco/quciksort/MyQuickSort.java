@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 public class MyQuickSort {
     public static void main(String[] args) {
-        int[] arr = {25, 2, 8, 60, 3};
+        int[] arr = {50, 40, 30, 20, 10};
         System.out.println("unsorted --> " + Arrays.toString(arr));
         MyQuickSort object = new MyQuickSort();
         object.quickSort(arr, 0, arr.length - 1);
@@ -34,6 +34,9 @@ public class MyQuickSort {
         int up = upper;
         while (down < up) {
             while (arr[down] <= pivot) {
+                if (down >= arr.length - 1) {
+                    break;
+                }
                 down = down + 1;
             }
             while (arr[up] > pivot) {
