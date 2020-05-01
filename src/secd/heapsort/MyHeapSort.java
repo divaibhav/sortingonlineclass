@@ -10,7 +10,7 @@ import java.util.Arrays;
 
 public class MyHeapSort {
     public static void main(String[] args) {
-        int[] arr = {20, 2, 8, 60, 50, 90, 3};
+        int[] arr = {6, 5, 3, 7, 4, 1, 3, 5, 3, 6};
         System.out.println("Unsorted -->" + Arrays.toString(arr));
         MyHeapSort object = new MyHeapSort();
         object.heapSort(arr);
@@ -94,7 +94,7 @@ public class MyHeapSort {
         int leftChild = (2 * parent) + 1;
         int rightChild = (2 * parent) + 2;
         if (leftChild < lastSortedIndex && rightChild < lastSortedIndex) {
-            if (arr[leftChild] > arr[rightChild]) {
+            if (arr[leftChild] >= arr[rightChild]) {
                 response = leftChild;
             } else {
                 response = rightChild;

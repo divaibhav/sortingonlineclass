@@ -43,7 +43,7 @@ public class MyHeapSort {
         int leftChild = (2 * parent) + 1;
         int rightChild = (2 * parent) + 2;
         if (leftChild < lastSortedIndex && rightChild < lastSortedIndex) {
-            if (arr[leftChild] > arr[rightChild]) {
+            if (arr[leftChild] >= arr[rightChild]) {
                 response = leftChild;
             } else {
                 response = rightChild;
